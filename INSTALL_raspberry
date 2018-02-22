@@ -1,0 +1,80 @@
+par defaut : debian 8 (Jessie)
+--------------------------------------------------------
+activer  - module camera
+	 - module i2c
+dans : framboise> Preferences> Raspi config> interfaces 
+--------------------------------------------------------
+tensorflow pour Raspberry :
+>> https://github.com/samjabrahams/tensorflow-on-raspberry-pi
+--------------------------------------------------------
+scikit-image : (machine learning + traitement images)
+>> sudo apt-get install python-skimage
+--------------------------------------------------------
+jupyter :
+>> sudo pip install --upgrade pip
+>> sudo pip install jupyter
+--------------------------------------------------------
+executer jupyter : 
+>> jupyter notebook
+--------------------------------------------------------
+>> uname -m
+armv7l
+===>32bits
+--------------------------------------------------------
+Spyder
+>> sudo apt-get install spyder      => ne fonctionne pas !!!
+installer miniconda ou anaconda en bash (32 bit - python2 - armv7l)
+https://repo.continuum.io/miniconda/
+https://stackoverflow.com/questions/36899863/anaconda-python-cannot-execute-native-linux-32-binary
+
+FINALEMENT HORS PROXY :
+>>sudo pip install --upgrade spyder
+>>pip install --upgrade beautifulsoup4
+>>sudo pip install --upgrade html5lib
+
+INSTALLER SPYDER3 !!! (fonctionne avec python2.7)
+>> sudo apt-get purge --auto-remove spyder
+>> sudo apt-get install spyder3
+
+lancer spyder : >>spyder 3
+ou
+creation de l alias spyder:
+>>sudo nano ~/.bashrc
+ajouter :
+#alias spyder3
+alias spyder='spyder %F'
+sourcer le fichier :
+>>source ~/.bashrc
+--------------------------------------------------------
+
+
+gedit
+>> sudo apt-get install gedit
+--------------------------------------------------------
+git :
+>> sudo apt-get update
+>> sudo apt-get install git-core
+==> configurer :
+>> git config --global user.name "xxx"    => set git username
+>> git config --global user.email "xxx@xxx.com"    => set git email
+>> git config --list     => see user settings
+=> .gitconfig
+>> nano ~/.gitconfig
+--------------------------------------------------------
+>> apt-get autoremove
+--------------------------------------------------------
+ARDUINO :
+telecharger version arm :
+https://www.arduino.cc/en/Main/Software
+suivre les instructions :
+https://medium.com/@ronm333/installing-the-arduino-ide-on-the-raspberry-pi-82301ab381b9
+
+creation de l alias arduino:
+>>sudo nano ~/.bashrc
+ajouter :
+#alias arduino
+alias arduino='/home/pi/Downloads/arduino-1.8.5/arduino'
+sourcer le fichier :
+>>source ~/.bashrc
+
+
